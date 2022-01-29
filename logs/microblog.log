@@ -1,0 +1,143 @@
+2020-09-12 20:39:13,437 ERROR: Exception on /search [GET] [in g:\microblog\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "g:\microblog\venv\lib\site-packages\urllib3\connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "g:\microblog\venv\lib\site-packages\urllib3\connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\Computer hurt\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1336, in getresponse
+    response.begin()
+  File "C:\Users\Computer hurt\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 306, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\Computer hurt\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 267, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\Computer hurt\AppData\Local\Programs\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "g:\microblog\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 246, in perform_request
+    method, url, body, retries=Retry(False), headers=request_headers, **kw
+  File "g:\microblog\venv\lib\site-packages\urllib3\connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "g:\microblog\venv\lib\site-packages\urllib3\util\retry.py", line 379, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "g:\microblog\venv\lib\site-packages\urllib3\packages\six.py", line 735, in reraise
+    raise value
+  File "g:\microblog\venv\lib\site-packages\urllib3\connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "g:\microblog\venv\lib\site-packages\urllib3\connectionpool.py", line 428, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "g:\microblog\venv\lib\site-packages\urllib3\connectionpool.py", line 336, in _raise_timeout
+    self, url, "Read timed out. (read timeout=%s)" % timeout_value
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='localhost', port=9200): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "g:\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "G:\microblog\app\main\routes.py", line 162, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "G:\microblog\app\models.py", line 16, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "G:\microblog\app\search.py", line 25, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "g:\microblog\venv\lib\site-packages\elasticsearch\client\utils.py", line 152, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "g:\microblog\venv\lib\site-packages\elasticsearch\client\__init__.py", line 1617, in search
+    body=body,
+  File "g:\microblog\venv\lib\site-packages\elasticsearch\transport.py", line 392, in perform_request
+    raise e
+  File "g:\microblog\venv\lib\site-packages\elasticsearch\transport.py", line 365, in perform_request
+    timeout=timeout,
+  File "g:\microblog\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 257, in perform_request
+    raise ConnectionTimeout("TIMEOUT", str(e), e)
+elasticsearch.exceptions.ConnectionTimeout: ConnectionTimeout caused by - ReadTimeoutError(HTTPConnectionPool(host='localhost', port=9200): Read timed out. (read timeout=10))
+2020-09-13 20:48:03,802 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-13 20:48:13,627 ERROR: Exception on /auth/login [POST] [in g:\microblog\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "G:\microblog\app\auth\routes.py", line 20, in login
+    if user is None or not user.check_password(form.password.data):
+AttributeError: 'User' object has no attribute 'check_password'
+2020-09-13 20:48:37,230 ERROR: Exception on /auth/login [POST] [in g:\microblog\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "G:\microblog\app\auth\routes.py", line 20, in login
+    if user is None or not user.check_password(form.password.data):
+AttributeError: 'User' object has no attribute 'check_password'
+2020-09-13 20:52:29,762 ERROR: Exception on /auth/login [POST] [in g:\microblog\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "G:\microblog\app\auth\routes.py", line 20, in login
+    if user is None or not user.check_password(form.password.data):
+AttributeError: 'User' object has no attribute 'check_password'
+2020-09-13 20:52:42,118 ERROR: Exception on /auth/login [POST] [in g:\microblog\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "G:\microblog\app\auth\routes.py", line 20, in login
+    if user is None or not user.check_password(form.password.data):
+AttributeError: 'User' object has no attribute 'check_password'
+2020-09-13 20:53:16,917 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-14 12:08:09,897 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-10-02 09:00:49,063 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-10-12 17:41:55,882 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]

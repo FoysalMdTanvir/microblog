@@ -1,0 +1,131 @@
+2020-07-26 12:27:31,687 ERROR: Exception on / [POST] [in g:\microblog\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "g:\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "G:\microblog\app\routes.py", line 23, in index
+    post = Post(body=form.post.data, author=current_user)
+AttributeError: 'TextAreaField' object has no attribute 'date'
+2020-07-26 12:27:51,190 ERROR: Exception on /index.html [POST] [in g:\microblog\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "g:\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "G:\microblog\app\routes.py", line 23, in index
+    post = Post(body=form.post.data, author=current_user)
+AttributeError: 'TextAreaField' object has no attribute 'date'
+2020-07-26 12:30:51,423 ERROR: Exception on /index.html [POST] [in g:\microblog\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "g:\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "G:\microblog\app\routes.py", line 23, in index
+    post = Post(body=form.post.data, author=current_user)
+AttributeError: 'TextAreaField' object has no attribute 'date'
+2020-07-26 12:31:46,179 INFO: Microblog startup [in G:\microblog\app\__init__.py:42]
+2020-07-26 13:01:34,668 INFO: Microblog startup [in G:\microblog\app\__init__.py:42]
+2020-07-26 13:04:57,539 INFO: Microblog startup [in G:\microblog\app\__init__.py:42]
+2020-07-26 13:07:37,189 INFO: Microblog startup [in G:\microblog\app\__init__.py:42]
+2020-07-26 13:09:58,628 INFO: Microblog startup [in G:\microblog\app\__init__.py:42]
+2020-07-26 13:34:30,347 INFO: Microblog startup [in G:\microblog\app\__init__.py:42]
+2020-07-26 13:55:42,277 INFO: Microblog startup [in G:\microblog\app\__init__.py:42]
+2020-07-26 14:10:57,352 INFO: Microblog startup [in G:\microblog\app\__init__.py:42]
+2020-07-27 11:47:21,524 INFO: Microblog startup [in G:\microblog\app\__init__.py:42]
+2020-07-30 17:20:51,240 INFO: Microblog startup [in G:\microblog\app\__init__.py:42]
+2020-07-30 17:21:02,481 INFO: Microblog startup [in G:\microblog\app\__init__.py:42]
+2020-07-30 17:38:09,067 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 18:11:48,184 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 18:32:58,433 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 19:27:23,970 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 19:33:49,634 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 19:35:48,032 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 19:38:00,231 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 19:41:07,583 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 19:43:07,243 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 19:52:04,436 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 20:08:39,940 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 20:08:40,902 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 22:10:18,831 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 22:12:13,230 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 22:16:18,393 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 22:37:13,909 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 22:48:29,177 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 22:50:36,318 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-30 23:10:18,820 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-31 10:24:56,670 INFO: Microblog startup [in G:\microblog\app\__init__.py:46]
+2020-07-31 11:03:57,139 INFO: Microblog startup [in G:\microblog\app\__init__.py:47]
+2020-07-31 11:47:43,024 INFO: Microblog startup [in G:\microblog\app\__init__.py:47]
+2020-07-31 12:11:12,751 INFO: Microblog startup [in G:\microblog\app\__init__.py:49]
+2020-08-03 20:48:46,147 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-03 21:36:35,970 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-03 21:39:23,089 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-03 21:50:47,430 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-03 21:52:24,769 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-03 21:54:01,344 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-03 21:55:39,151 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-03 22:11:37,759 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-03 22:12:21,969 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-03 22:13:23,150 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-03 22:13:59,768 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-03 22:14:41,004 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-03 22:14:54,870 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-03 22:16:06,667 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-03 22:18:24,444 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-14 08:51:42,962 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-14 08:54:28,777 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-14 09:32:17,304 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-14 09:32:30,398 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-14 09:33:43,953 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-14 09:33:57,043 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-14 10:14:01,509 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-14 10:39:18,645 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-14 10:50:00,661 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-14 11:25:36,138 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-14 11:25:51,513 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-14 11:27:05,117 INFO: Microblog startup [in G:\microblog\app\__init__.py:51]
+2020-08-20 11:42:55,572 INFO: Microblog startup [in G:\microblog\app\__init__.py:74]
+2020-08-25 22:01:40,002 INFO: Microblog startup [in G:\microblog\app\__init__.py:74]
+2020-08-25 22:10:39,441 INFO: Microblog startup [in G:\microblog\app\__init__.py:74]
+2020-08-25 22:58:57,856 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-08-25 23:02:37,810 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-08-25 23:13:41,104 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-08-25 23:24:49,280 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-08-27 11:22:59,133 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-01 10:20:55,631 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-01 10:33:41,055 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-03 17:54:21,376 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-09 11:36:40,810 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-09 11:52:25,289 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]

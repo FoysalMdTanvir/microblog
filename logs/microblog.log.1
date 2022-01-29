@@ -1,0 +1,129 @@
+2020-09-10 11:41:08,875 ERROR: Exception on /auth/login [POST] [in g:\microblog\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: user.last_message_read_time
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "G:\microblog\app\auth\routes.py", line 19, in login
+    user = User.query.filter_by(username=form.username.data).first()
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3375, in first
+    ret = list(self[0:1])
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3149, in __getitem__
+    return list(res)
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3481, in __iter__
+    return self._execute_and_instances(context)
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3506, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1020, in execute
+    return meth(self, multiparams, params)
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1139, in _execute_clauseelement
+    distilled_params,
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1324, in _execute_context
+    e, statement, parameters, cursor, context
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1518, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
+    raise exception
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: user.last_message_read_time
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen, user.last_message_read_time AS user_last_message_read_time 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Md. Tanvir Foysal', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-09-10 11:45:56,207 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-10 11:46:27,643 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-10 11:46:43,648 ERROR: Exception on /auth/login [POST] [in g:\microblog\venv\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: user.last_message_read_time
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "G:\microblog\app\auth\routes.py", line 19, in login
+    user = User.query.filter_by(username=form.username.data).first()
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3375, in first
+    ret = list(self[0:1])
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3149, in __getitem__
+    return list(res)
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3481, in __iter__
+    return self._execute_and_instances(context)
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3506, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1020, in execute
+    return meth(self, multiparams, params)
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1139, in _execute_clauseelement
+    distilled_params,
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1324, in _execute_context
+    e, statement, parameters, cursor, context
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1518, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
+    raise exception
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1284, in _execute_context
+    cursor, statement, parameters, context
+  File "g:\microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: user.last_message_read_time
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen, user.last_message_read_time AS user_last_message_read_time 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Fahmida', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2020-09-10 11:47:07,873 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-10 11:48:08,059 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-10 11:48:24,992 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-10 11:48:47,261 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-10 12:06:07,665 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-10 12:06:19,709 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-10 12:06:35,735 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-10 12:07:43,237 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-10 12:09:35,720 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-10 12:09:50,366 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-10 12:09:57,645 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-11 11:25:52,762 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-11 22:27:58,896 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-12 20:32:46,212 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
+2020-09-12 20:36:48,166 INFO: Microblog startup [in G:\microblog\app\__init__.py:77]
